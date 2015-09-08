@@ -1,4 +1,4 @@
-E20 Demo
+E20 Demo - See e20-kit1-demo.pdf for details
 -----------------------------------------------
 
 ssid="synapse-e20", password="synapse1"
