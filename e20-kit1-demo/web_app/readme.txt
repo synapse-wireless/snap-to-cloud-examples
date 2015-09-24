@@ -8,5 +8,5 @@ together.
 The application is written for Python 2.7. Install the required libraries
 into your python environment as follows:
 
-pip install snapconnect –i https://update.synapse-wireless.com/pypi/
+pip install snapconnect -i https://update.synapse-wireless.com/pypi/
 pip install tornado
