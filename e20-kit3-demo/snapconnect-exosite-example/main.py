@@ -12,10 +12,10 @@ from tornado import httpclient
 from pyonep import onep  # Exosite Python Library
 
 
-# TODO: Replace these with values from your own exosite account and resource
-# We like to map SN171 SNAP addresses to Exosite CIKs
-EXOSITE_CIKS = {"XXXXXX": 'unique exocite CIK here',
-                "YYYYYY": 'another unique exocite CIK here'}
+# TODO: Replace these with values from your own Exosite account and resource
+# We want to map SN171 SNAP addresses to Exosite CIKs
+EXOSITE_CIKS = {"XXXXXX": 'unique Exosite CIK here',
+                "YYYYYY": 'another unique Exosite CIK here'}
 
 SNAPCONNECT_POLL_INTERVAL = 10  # milliseconds
 
@@ -37,7 +37,7 @@ else:
 class ExositeExample(object):
     def __init__(self):
         """
-        Instantiates an instance of ExositeExample
+        Initializes an instance of ExositeExample
         :return:
         """
         snap_rpc_funcs = {'status': self._on_status}
@@ -59,7 +59,7 @@ class ExositeExample(object):
 
     def _on_status(self, batt, button_state, button_count):
         """
-        Writes a the status values received from a node to Exosite
+        Writes the various status values received from a node to Exosite
         :return: None
         """
         remote_addr = binascii.hexlify(self.snapconnect.rpc_source_addr())
