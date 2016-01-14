@@ -39,5 +39,4 @@ The application is written for Python 2.7. Install the required libraries into y
 ```pip install -r requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
 
 ### Exosite Requirements
-An Exosite "Portals" account is required. Sign up for a free account at:
-```https://portals.exosite.com/signup?plan=2692704445```
+An Exosite "Portals" account is required. [Sign up for a free account here](https://portals.exosite.com/signup?plan=2692704445)

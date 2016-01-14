@@ -1,4 +1,0 @@
-# Start wifi AP mode
-iwpriv wlan0 AP_SET_CFG ASCII_CMD=AP_CFG,SSID="synapse-e20",SEC="wpa2-psk",KEY=12d6eb7d0ac96be7953fdaee3c5352c62c83220de68e062b99edd0cf499b13e2,CHANNEL=1,PREAMBLE=1,MAX_SCB=8,END
-iwpriv wlan0 AP_BSS_START
-
