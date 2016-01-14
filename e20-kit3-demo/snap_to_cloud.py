@@ -7,7 +7,6 @@ from apy import ioloop_scheduler
 
 import tornado.ioloop
 
-
 if sys.platform == "linux2":
     # E20 built-in bridge
     serial_conn = snap.SERIAL_TYPE_RS232
@@ -31,6 +30,7 @@ else:
 
 
 class SNAPToCloudExample(object):
+
     def __init__(self, cloud_connector, poll_interval=10):
         """Initializes an instance of SNAPToCloudExample.
         
@@ -45,14 +45,14 @@ class SNAPToCloudExample(object):
             license_file=snap_license,
             addr=snap_addr,
             scheduler=ioloop_scheduler.IOLoopScheduler(),
-            funcs=snap_rpc_funcs
-        )
+            funcs=snap_rpc_funcs)
 
         self.snapconnect.open_serial(serial_conn, serial_port)
 
         # Tell tornado to call SNAP connect internals periodically
-        tornado.ioloop.PeriodicCallback(self.snapconnect.poll_internals, poll_interval).start()
-        
+        tornado.ioloop.PeriodicCallback(self.snapconnect.poll_internals,
+                                        poll_interval).start()
+
         # Start the IOLoop, nothing can happen after this point
         tornado.ioloop.IOLoop.instance().start()
 
@@ -64,4 +64,5 @@ class SNAPToCloudExample(object):
         self.cloud_connector.publish(remote_addr, {
             "batt": batt,
             "button_state": button_state,
-            "button_count": button_count})
+            "button_count": button_count
+        })
