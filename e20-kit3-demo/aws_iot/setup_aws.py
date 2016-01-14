@@ -26,12 +26,8 @@ def generate_cert(cert_file_name, private_key_filename):
 
 
 def create_new_policy(policy_name):
-    try:
-        iot.create_policy(policyName=policy_name,
-                          policyDocument=json.dumps(IOT_POLICY))
-    except Exception:
-        pass
-    return policy_name
+    iot.create_policy(policyName=policy_name,
+                      policyDocument=json.dumps(IOT_POLICY))
 
 
 def attach_policy_to_cert(policy_name, cert_arn):
@@ -39,11 +35,7 @@ def attach_policy_to_cert(policy_name, cert_arn):
 
 
 def create_new_thing(thing_name):
-    try:
-        iot.create_thing(thingName=thing_name)
-    except Exception:
-        pass
-    return thing_name
+    iot.create_thing(thingName=thing_name)
 
 
 def attach_thing_to_cert(thing_name, cert_arn):
