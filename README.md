@@ -16,14 +16,13 @@ Install the package dependencies:
 ```pip install -r aws_iot/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
 
 ### AWS Requirements
-An AWS developer account is required, your account must have full AWS IoT privileges. 
-Sign up here: ```https://aws.amazon.com/```
+An AWS developer account is required, your account must have full AWS IoT privileges. [Follow the instructions here to sign up for AWS.](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html#cli-signup)
 
-You must install and authenticate with AWS CLI, this is a python package that is installed when you install the 
+You must install and authenticate with AWS CLI, this is a python package that is installed when you install the Python
 requirements file.
 
 To authenticate your user with AWS, type ```aws configure``` and specify your AWS Access Key ID, AWS Secret Access Key, 
-and region.
+and region. For more information, see [Configuring the AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
 
 Update the ```THINGS``` variable in ```aws_iot/settings.py``` file to specify your device IDs (these need be the SNAP 
 addresses of your SN171 boards). Once you have updated this file, run ```python setup_aws.py``` from the ```aws_iot```

@@ -36,8 +36,8 @@ else:
 
 class ExositeExample(object):
     def __init__(self):
-        """
-        Initializes an instance of ExositeExample
+        """Initializes an instance of ExositeExample.
+
         :return:
         """
         snap_rpc_funcs = {'status': self._on_status}
@@ -58,8 +58,8 @@ class ExositeExample(object):
         self.exosite = onep.OnepV1()
 
     def _on_status(self, batt, button_state, button_count):
-        """
-        Writes the various status values received from a node to Exosite
+        """Writes the various status values received from a node to Exosite.
+
         :return: None
         """
         remote_addr = binascii.hexlify(self.snapconnect.rpc_source_addr())
@@ -81,8 +81,8 @@ class ExositeExample(object):
 
     @staticmethod
     def _handle_request(response):
-        """
-        Prints the response of a HTTPRequest
+        """Prints the response of a HTTPRequest.
+
         :param response: HTTPRequest
         :return:
         """

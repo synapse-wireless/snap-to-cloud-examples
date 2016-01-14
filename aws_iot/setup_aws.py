@@ -26,8 +26,7 @@ def generate_cert(cert_file_name, private_key_filename):
 
 
 def create_new_policy(policy_name):
-    iot.create_policy(policyName=policy_name,
-                      policyDocument=json.dumps(IOT_POLICY))
+    iot.create_policy(policyName=policy_name, policyDocument=json.dumps(IOT_POLICY))
 
 
 def attach_policy_to_cert(policy_name, cert_arn):

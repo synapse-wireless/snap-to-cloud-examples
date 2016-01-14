@@ -1,5 +1,5 @@
 # Copyright (C) 2014 Synapse Wireless, Inc.
-"""NV settings initialization"""
+"""NV settings initialization."""
 from synapse.nvparams import *
 
 def init_nv_settings(mcast_proc, mcast_fwd, cs, ca, cd):
@@ -24,4 +24,3 @@ def check_nv(param, val):
         saveNvParam(param, val)
         _needs_reboot = True
 
-    

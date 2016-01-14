@@ -1,6 +1,7 @@
 # Copyright (C) 2014 Synapse Wireless, Inc.
-"""ATmega128RFA1 internal battery monitor support
-The Battery Monitor can be configured using the BATMON register. Register subfield
+"""ATmega128RFA1 internal battery monitor support The Battery Monitor can be configured using the BATMON register.
+
+Register subfield
 BATMON_VTH sets the threshold voltage. It is configurable with a resolution of 75 mV
 in the upper voltage range (BATMON_HR = 1) and with a resolution of 50 mV in the
 lower voltage range (BATMON_HR = 0).
@@ -33,4 +34,3 @@ def batmon_mv():
             return low_range[i]
 
     return 0
- 

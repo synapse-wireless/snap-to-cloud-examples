@@ -30,10 +30,9 @@ else:
 
 
 class SNAPToCloudExample(object):
-
     def __init__(self, cloud_connector, poll_interval=10):
         """Initializes an instance of SNAPToCloudExample.
-        
+
         :param cloud_connector: A connection that can publish to a cloud service
         :param int poll_interval: How often SNAPConnect should poll, in milliseconds
         """
@@ -41,17 +40,15 @@ class SNAPToCloudExample(object):
         snap_rpc_funcs = {'status': self._on_status}
 
         # Create SNAP Connect instance. Note: we are using Tornado's scheduler.
-        self.snapconnect = snap.Snap(
-            license_file=snap_license,
-            addr=snap_addr,
-            scheduler=ioloop_scheduler.IOLoopScheduler(),
-            funcs=snap_rpc_funcs)
+        self.snapconnect = snap.Snap(license_file=snap_license,
+                                     addr=snap_addr,
+                                     scheduler=ioloop_scheduler.IOLoopScheduler(),
+                                     funcs=snap_rpc_funcs)
 
         self.snapconnect.open_serial(serial_conn, serial_port)
 
         # Tell tornado to call SNAP connect internals periodically
-        tornado.ioloop.PeriodicCallback(self.snapconnect.poll_internals,
-                                        poll_interval).start()
+        tornado.ioloop.PeriodicCallback(self.snapconnect.poll_internals, poll_interval).start()
 
         # Start the IOLoop, nothing can happen after this point
         tornado.ioloop.IOLoop.instance().start()

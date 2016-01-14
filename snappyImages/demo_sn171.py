@@ -16,7 +16,7 @@ button_count = 0
 
 @setHook(HOOK_STARTUP)
 def init():
-    """Startup initialization"""
+    """Startup initialization."""
     # Set basic mesh parameters
     init_nv_settings(1, 1, True, True, False)
     
@@ -33,7 +33,7 @@ def init():
     
 @setHook(HOOK_1S)
 def tick1sec():
-    """Tick event handler"""
+    """Tick event handler."""
     global second_count
     second_count += 1
     if second_count == GRATUITOUS_STATUS_PERIOD:
@@ -42,7 +42,7 @@ def tick1sec():
     
 @setHook(HOOK_GPIN)
 def pin_event(pin, is_set):
-    """Button press event handler"""
+    """Button press event handler."""
     global button_count
     if pin == BUTTON:
         if not is_set:
@@ -50,7 +50,7 @@ def pin_event(pin, is_set):
         send_status()
 
 def send_status():
-    """Broadcast a status RPC"""
+    """Broadcast a status RPC."""
     pulsePin(LED1_GRN, 50, True)
     mcastRpc(1, 3, 'status', batmon_mv(), not readPin(BUTTON), button_count)
 
