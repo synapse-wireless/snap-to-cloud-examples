@@ -1,0 +1,6 @@
+snapconnect>=3.4.3,<3.5
+tornado>=4.3
+awscli==1.9.18
+boto3==1.2.3
+ipython==4.0.2
+paho-mqtt==1.1
