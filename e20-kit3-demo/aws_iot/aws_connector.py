@@ -21,17 +21,19 @@ class AWSConnector(object):
             self.get_cafile()
 
         self.mqtt_client = None
-        self.setup_mqtt_client()
+        self.connect_mqtt_client()
 
     def _on_mqtt_log(self, client, userdata, level, buf):
-        """Map from Paho MQTT log events to Python logging."""
+        """Print Paho MQTT log events."""
         print buf
 
     def get_abs_path(self, filename):
+        """Get the absolute path for a file relative to this file."""
         return os.path.join(
             os.path.dirname(os.path.abspath(__file__)), filename)
 
-    def setup_mqtt_client(self):
+    def connect_mqtt_client(self):
+        """Connect to the AWS IoT endpoint."""
         # Create MQTT client
         self.mqtt_client = mqtt.Client(self.client_id)
         self.mqtt_client.on_log = self._on_mqtt_log
@@ -47,13 +49,19 @@ class AWSConnector(object):
         self.mqtt_client.connect(self.endpoint_address, port=8883)
 
     def get_cafile(self):
-        AUTHORITY_LOCATION = "https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem"
+        """Download a certificate to authenticate the identity of the AWS IoT platform."""
+        authority_location = "https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem"
 
         url = urllib.URLopener()
         cafile = self.get_abs_path(CAFILE)
-        url.retrieve(AUTHORITY_LOCATION, cafile)
+        url.retrieve(authority_location, cafile)
 
     def publish(self, thing_id, state):
+        """Publish a message to AWS IoT.
+        
+        :param str thing_id: The 6-character SNAP MAC Address
+        :param dict state: A dictionary containing the new state values for a thing
+        """
         topic = "$aws/things/{thing_id}/shadow/update".format(
             thing_id=thing_id.upper())
         update = json.dumps({"state": {"reported": state}})

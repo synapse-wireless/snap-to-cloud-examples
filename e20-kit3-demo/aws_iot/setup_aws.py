@@ -51,9 +51,7 @@ def attach_thing_to_cert(thing_name, cert_arn):
 
 
 if __name__ == "__main__":
-    iot_cert_arn = generate_cert(CERTIFICATE_CERT,
-                                 CERTIFICATE_KEY)
-    print iot_cert_arn
+    iot_cert_arn = generate_cert(CERTIFICATE_CERT, CERTIFICATE_KEY)
     iot_policy = create_new_policy("iot_policy")
 
     # Attach Policy to Cert

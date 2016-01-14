@@ -1,4 +1,4 @@
-THINGS = ["04AB59"]
+THINGS = ["04AB59"]  # TODO - Update this value with your things. These are the SNAP MACs for your devices, ex: "ABC123"
 PROFILE_NAME = "default"
 CERTIFICATE_CERT = "certs/certificate_cert.pem"
 CERTIFICATE_KEY = "certs/certificate_key.pem"
