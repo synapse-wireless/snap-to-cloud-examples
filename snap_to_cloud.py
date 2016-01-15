@@ -24,19 +24,18 @@ else:
     serial_conn = snap.SERIAL_TYPE_SNAPSTICK200
     serial_port = 0
     snap_addr = '\x00\x00\x20'  # SNAP Connect address from included License.dat
-    # TODO - Probably need to do something with these paths for windows
     cur_path = os.path.normpath(os.path.dirname(__file__))
     snap_license = os.path.join(cur_path, 'License.dat')
 
 
 class SNAPToCloudExample(object):
-    def __init__(self, cloud_connector, poll_interval=10):
+    def __init__(self, publish, poll_interval=10):
         """Initializes an instance of SNAPToCloudExample.
 
-        :param cloud_connector: A connection that can publish to a cloud service
+        :param Callable[[str, dict], None] publish: A function for publishing to a cloud service
         :param int poll_interval: How often SNAPConnect should poll, in milliseconds
         """
-        self.cloud_connector = cloud_connector
+        self.publish = publish
         snap_rpc_funcs = {'status': self._on_status}
 
         # Create SNAP Connect instance. Note: we are using Tornado's scheduler.
@@ -54,11 +53,11 @@ class SNAPToCloudExample(object):
         tornado.ioloop.IOLoop.instance().start()
 
     def _on_status(self, batt, button_state, button_count):
-        """Publish status to the cloud."""
+        """Publish device status."""
         remote_addr = binascii.hexlify(self.snapconnect.rpc_source_addr())
         print batt, button_state, button_count
 
-        self.cloud_connector.publish(remote_addr, {
+        self.publish(remote_addr, {
             "batt": batt,
             "button_state": button_state,
             "button_count": button_count
