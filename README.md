@@ -55,3 +55,5 @@ The application is written for Python 2.7. Install the required libraries into y
 
 ### Exosite Requirements
 An Exosite "Portals" account is required. [Sign up for a free account here](https://portals.exosite.com/signup?plan=2692704445)
+
+See `exosite-demo.docx` for instructions on how to add devices to your Exosite "Portals" account.
