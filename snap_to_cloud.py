@@ -61,4 +61,4 @@ class SNAPToCloudExample(object):
             "batt": batt,
             "button_state": button_state,
             "button_count": button_count
-        })
+        })  # yapf: disable

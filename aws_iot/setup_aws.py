@@ -10,10 +10,10 @@ from settings import PROFILE_NAME, THINGS, CERTIFICATE_CERT, CERTIFICATE_KEY
 
 # Permissions to assign to an AWS IoT Policy, this controls what operations the certificate owner can perform.
 # This policy allows all AWS IoT operations on all resources.
-IOT_POLICY = {'Version': '2012-10-17', 
-              'Statement': [{'Effect': 'Allow', 
-                             'Action': ['iot:*'], 
-                             'Resource': ['*']}, ]}
+IOT_POLICY = {'Version': '2012-10-17',
+              'Statement': [{'Effect': 'Allow',
+                             'Action': ['iot:*'],
+                             'Resource': ['*']}, ]}  # yapf: disable
 
 
 def generate_and_save_cert(iot, cert_filename, private_key_filename):
