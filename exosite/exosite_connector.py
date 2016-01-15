@@ -5,7 +5,8 @@ from tornado import httpclient
 
 # TODO: Replace these with values from your own Exosite account and resource
 # We want to map SN171 SNAP addresses to Exosite CIKs
-EXOSITE_CIKS = {"XXXXXX": 'unique Exosite CIK here', "YYYYYY": 'another unique Exosite CIK here'}
+EXOSITE_CIKS = {"XXXXXX": 'unique Exosite CIK here',
+                "YYYYYY": 'another unique Exosite CIK here'}
 
 
 class ExositeConnector(object):
@@ -20,9 +21,10 @@ class ExositeConnector(object):
         """
         # Use the Exosite Python Library to format the message
         jsonreq = {"auth": {"cik": EXOSITE_CIKS[thing_id]},
-                   "calls": self.exosite._composeCalls([('writegroup', [[[{"alias": "batt"}, int(state[
-                       'batt'])], [{"alias": "state"}, int(state['button_state'])], [{"alias": "count"}, state[
-                           'button_count']]]])])}
+                   "calls": self.exosite._composeCalls([('writegroup',
+                                                         [[[{"alias": "batt"}, int(state['batt'])],
+                                                           [{"alias": "state"}, int(state['button_state'])],
+                                                           [{"alias": "count"}, state['button_count']]]])])}
         # Create a Tornado HTTPRequest
         request = httpclient.HTTPRequest(url=self.exosite.onephttp.host + self.exosite.url,
                                          method='POST',
