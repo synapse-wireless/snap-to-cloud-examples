@@ -1,12 +1,28 @@
 # Cloud Examples
 
-This project uses the SN171 Protoboard and a standard SNAP Connect
-gateway running with tornado as webserver/scheduler to push data to different cloud services.
+This project uses the SN171 Protoboard and a standard SNAP Connect gateway running with tornado as webserver/scheduler 
+to push data to different cloud services.
 
 The application server for these examples uses the SNAP Connect Python library to communicate over a SNAP bridge
 device to the wireless sensor nodes, and the Tornado Python library to communicate with a remote API. Both the SNAP 
 Connect Python library and the Tornado Python library are high-performance asynchronous services, and they work 
 really well together.
+
+## Common Setup
+### Setup SN132
+Connect the SN132 to your PC by plugging it into any available USB port.
+
+### Setup Portal
+if you have not already done so, download and install Portal.
+
+Portal can be found at [forums.synapse-wireless.com](forums.synapse-wireless.com).
+
+### Setup the SN171s
+Copy the contents of the `snappyImages` directory to your `Portal/snappyImages` directory. Apply power to the SN171s.
+
+Now you can connect Portal to the SN132 as a bridge node and upload the `demo_sn171.py` script into the SN171s.
+
+Please make a note of the SNAP Addresses of the two SN171 nodes - you will need this information later
 
 ## AWS IoT Example
 ### Python Requirements
