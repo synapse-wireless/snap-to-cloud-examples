@@ -3,11 +3,12 @@
 
 from nv_settings import *
 from batmon import *
+from platforms import *
 
 # I/O Pins
-BUTTON = 20    # active low switch input
-LED2_YLW = 5
-LED1_GRN = 6
+BUTTON = GPIO_5    # active low switch input
+LED2_YLW = GPIO_2
+LED1_GRN = GPIO_1
 
 GRATUITOUS_STATUS_PERIOD = 5  # seconds
 
@@ -44,6 +45,7 @@ def tick1sec():
 def pin_event(pin, is_set):
     """Button press event handler."""
     global button_count
+    print
     if pin == BUTTON:
         if not is_set:
             button_count += 1
