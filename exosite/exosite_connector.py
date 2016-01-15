@@ -5,7 +5,7 @@ from tornado import httpclient
 
 # TODO: Replace these with values from your own Exosite account and resource
 # We want to map SN171 SNAP addresses to Exosite CIKs
-# Addresses should not have any separators (no “.” Or “:”, etc.). The hexadecimal digits a-f must be entered in lower case.
+# Addresses should not have any separators (no "." Or ":", etc.). The hexadecimal digits a-f must be entered in lower case.
 EXOSITE_CIKS = {"XXXXXX": 'unique Exosite CIK here',
                 "YYYYYY": 'another unique Exosite CIK here'}  # yapf: disable
 
