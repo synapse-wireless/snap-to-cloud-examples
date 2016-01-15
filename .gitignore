@@ -65,3 +65,5 @@ nvparams.dat
 
 # AWS
 aws_iot/certs/
+
+!.gitkeep
