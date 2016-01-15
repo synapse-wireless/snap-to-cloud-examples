@@ -3,7 +3,7 @@
 
 from nv_settings import *
 from batmon import *
-from platforms import *
+from synapse.platforms import *
 
 # I/O Pins
 BUTTON = GPIO_5    # active low switch input
@@ -20,18 +20,18 @@ def init():
     """Startup initialization."""
     # Set basic mesh parameters
     init_nv_settings(1, 1, True, True, False)
-    
+
     # Init LEDs
     setPinDir(LED1_GRN, True)
     setPinDir(LED2_YLW, True)
     pulsePin(LED1_GRN, 500, True)
     pulsePin(LED2_YLW, 300, True)
-    
+
     # Init switches
     setPinDir(BUTTON, False)
     setPinPullup(BUTTON, True)
     monitorPin(BUTTON, True)
-    
+
 @setHook(HOOK_1S)
 def tick1sec():
     """Tick event handler."""
@@ -40,7 +40,7 @@ def tick1sec():
     if second_count == GRATUITOUS_STATUS_PERIOD:
         second_count = 0
         send_status()
-    
+
 @setHook(HOOK_GPIN)
 def pin_event(pin, is_set):
     """Button press event handler."""
