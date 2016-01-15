@@ -54,7 +54,7 @@ class SNAPToCloudExample(object):
 
     def _on_status(self, batt, button_state, button_count):
         """Publish device status."""
-        remote_addr = binascii.hexlify(self.snapconnect.rpc_source_addr()).upper()
+        remote_addr = binascii.hexlify(self.snapconnect.rpc_source_addr())
         print batt, button_state, button_count
 
         self.publish(remote_addr, {

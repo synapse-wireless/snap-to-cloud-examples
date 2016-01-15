@@ -52,6 +52,6 @@ if __name__ == "__main__":
 
     for thing in THINGS:
         # Create a Thing resource for each SN 171
-        uppercase_name = thing.upper()
-        iot.create_thing(thingName=uppercase_name)
-        iot.attach_thing_principal(thingName=uppercase_name, principal=iot_cert_arn)
+        lowercase_name = thing.lower()
+        iot.create_thing(thingName=lowercase_name)
+        iot.attach_thing_principal(thingName=lowercase_name, principal=iot_cert_arn)

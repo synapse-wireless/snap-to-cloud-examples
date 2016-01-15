@@ -61,6 +61,6 @@ class AWSConnector(object):
         :param str thing_id: The 6-character SNAP MAC Address
         :param dict state: A dictionary containing the new state values for a thing
         """
-        topic = "$aws/things/{thing_id}/shadow/update".format(thing_id=thing_id.upper())
+        topic = "$aws/things/{thing_id}/shadow/update".format(thing_id=thing_id.lower())
         update = json.dumps({"state": {"reported": state}})
         self.mqtt_client.publish(topic, payload=update, qos=1)
