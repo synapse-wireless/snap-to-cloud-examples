@@ -46,14 +46,18 @@ directory to create your devices, policy, and certificate.
 
 ### Running
 Run the AWS example using the following command:
-```python aws_iot_example.py```
+```sudo python aws_iot_example.py```
 
 ## Exosite Example
 ### Python Requirements
 The application is written for Python 2.7. Install the required libraries into your Python environment as follows:
-```pip install -r requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
+```pip install -r exosite/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
 
 ### Exosite Requirements
 An Exosite "Portals" account is required. [Sign up for a free account here](https://portals.exosite.com/signup?plan=2692704445)
 
 See `exosite-demo.docx` for instructions on how to add devices to your Exosite "Portals" account.
+
+### Running
+Run the Exosite example using the following command:
+```sudo python exosite_example.py```
