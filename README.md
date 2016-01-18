@@ -15,7 +15,7 @@ Connect the SN132 to your PC by plugging it into any available USB port.
 ### Setup Portal
 if you have not already done so, download and install Portal.
 
-Portal can be found at [forums.synapse-wireless.com](forums.synapse-wireless.com).
+Portal can be found at [forums.synapse-wireless.com](https://forums.synapse-wireless.com).
 
 ### Setup the SN171s
 Copy the contents of the `snappyImages` directory to your `Portal/snappyImages` directory. Apply power to the SN171s.
