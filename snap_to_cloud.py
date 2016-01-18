@@ -13,14 +13,8 @@ if sys.platform == "linux2":
     serial_port = '/dev/snap1'
     snap_addr = None  # Intrinsic address on Exx gateways
     snap_license = None
-elif sys.platform == "Darwin":
-    # SS200 USB stick on Mac
-    serial_conn = snap.SERIAL_TYPE_SNAPSTICK200
-    serial_port = '/dev/snap1'
-    snap_addr = None  # Intrinsic address on Exx gateways
-    snap_license = None
 else:
-    # SS200 USB stick on Windows
+    # SS200 USB stick on Windows or Mac
     serial_conn = snap.SERIAL_TYPE_SNAPSTICK200
     serial_port = 0
     snap_addr = '\x00\x00\x20'  # SNAP Connect address from included License.dat
