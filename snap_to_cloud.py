@@ -43,7 +43,7 @@ class SNAPToCloudExample(object):
                                      addr=snap_addr,
                                      scheduler=ioloop_scheduler.IOLoopScheduler(),
                                      funcs=snap_rpc_funcs)
-
+        self.snapconnect.save_nv_param(snap.NV_FEATURE_BITS_ID, 0x0100)  # RPC CRC Only
         self.snapconnect.open_serial(serial_conn, serial_port)
 
         # Tell tornado to call SNAP connect internals periodically
