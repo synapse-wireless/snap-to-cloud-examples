@@ -1,6 +1,6 @@
 # Cloud Examples
 
-This project uses the SN171 Protoboard and a standard SNAP Connect gateway running with tornado as webserver/scheduler 
+This project uses the SN171 Protoboard and a standard SNAP Connect E20 gateway running with tornado as webserver/scheduler
 to push data to different cloud services.
 
 The application server for these examples uses the SNAP Connect Python library to communicate over a SNAP bridge
@@ -25,11 +25,16 @@ Now you can connect Portal to the SN132 as a bridge node and upload the `demo_sn
 Please make a note of the SNAP Addresses of the two SN171 nodes - you will need this information later
 
 ## AWS IoT Example
-### Python Requirements
-Note: You must be using python 2.7.11+ in order to use this example.
+### Installing Python 2.7.9
+Python 2.7.9 or later is required for interacting with AWS IoT. Ubuntu 14.04 does not have a version in the apt repository,
+so we need to build it for the E20. If you do not already have Python 2.7.9 installed, you can install it 
+using ```sudo ./install-python2.7.9.sh```
+
+### Python Package Requirements
+Note: You must be using python 2.7.9+ in order to use this example.
 
 Install the package dependencies:
-```pip install -r aws_iot/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
+```sudo pip2.7.9 install -r aws_iot/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
 
 ### AWS Requirements
 An AWS developer account is required, your account must have full AWS IoT privileges. [Follow the instructions here to sign up for AWS.](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html#cli-signup)
@@ -46,12 +51,12 @@ directory to create your devices, policy, and certificate.
 
 ### Running
 Run the AWS example using the following command:
-```sudo python aws_iot_example.py```
+```sudo python2.7.9 aws_iot_example.py```
 
 ## Exosite Example
 ### Python Requirements
 The application is written for Python 2.7. Install the required libraries into your Python environment as follows:
-```pip install -r exosite/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
+```sudo pip install -r exosite/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
 
 ### Exosite Requirements
 An Exosite "Portals" account is required. [Sign up for a free account here](https://portals.exosite.com/signup?plan=2692704445)
