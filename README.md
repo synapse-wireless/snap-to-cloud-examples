@@ -18,18 +18,18 @@ if you have not already done so, download and install Portal.
 Portal can be found at [forums.synapse-wireless.com](https://forums.synapse-wireless.com).
 
 ### Setup the SN171s
-Copy the contents of the `snappyImages` directory to your `Portal/snappyImages` directory. Apply power to the SN171s.
+Copy the contents of this project's `snappyImages` directory to your `Portal/snappyImages` directory. Apply power to the SN171s.
 
 Now you can connect Portal to the SN132 as a bridge node and upload the `demo_sn171.py` script into the SN171s.
 
 Please make a note of the SNAP Addresses of the two SN171 nodes - you will need this information later
 
-## AWS IoT Example
-### Installing Python 2.7.9
-Python 2.7.9 or later is required for interacting with AWS IoT. Ubuntu 14.04 does not have a version in the apt repository,
-so we need to build it for the E20. If you do not already have Python 2.7.9 installed, you can install it 
-using ```sudo ./install-python2.7.9.sh```
+## Install Python 2.7.9
+The E20 runs Ubuntu 14.04, which comes with Python 2.7.6 by default. Python 2.7.9 or later is required for interacting with 
+AWS IoT and Exosite, so we need to build it for the E20. If you do not already have Python 2.7.9 installed, clone this project
+onto the E20 and run ```sudo ./install-python2.7.9.sh``` to build and install it.
 
+## AWS IoT Example
 ### Python Package Requirements
 Note: You must be using python 2.7.9+ in order to use this example.
 
@@ -42,11 +42,11 @@ An AWS developer account is required, your account must have full AWS IoT privil
 You must install and authenticate with AWS CLI, this is a python package that is installed when you install the Python
 requirements file.
 
-To authenticate your user with AWS, type ```aws configure``` and specify your AWS Access Key ID, AWS Secret Access Key, 
-and region. For more information, see [Configuring the AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
+To authenticate your user with AWS, type ```/usr/local/lib/python2.7.9/bin/aws configure``` and specify your AWS Access Key ID, 
+AWS Secret Access Key, and region. For more information, see [Configuring the AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
 
 Update the ```THINGS``` variable in ```aws_iot/settings.py``` file to specify your device IDs (these need be the SNAP 
-addresses of your SN171 boards). Once you have updated this file, run ```python setup_aws.py``` from the ```aws_iot```
+addresses of your SN171 boards). Once you have updated this file, run ```python2.7.9 setup_aws.py``` from the ```aws_iot```
 directory to create your devices, policy, and certificate.
 
 ### Running
@@ -56,7 +56,7 @@ Run the AWS example using the following command:
 ## Exosite Example
 ### Python Requirements
 The application is written for Python 2.7. Install the required libraries into your Python environment as follows:
-```sudo pip install -r exosite/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
+```sudo pip2.7.9 install -r exosite/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
 
 ### Exosite Requirements
 An Exosite "Portals" account is required. [Sign up for a free account here](https://portals.exosite.com/signup?plan=2692704445)
@@ -65,4 +65,4 @@ See `exosite-demo.docx` for instructions on how to add devices to your Exosite "
 
 ### Running
 Run the Exosite example using the following command:
-```sudo python exosite_example.py```
+```sudo python2.7.9 exosite_example.py```
