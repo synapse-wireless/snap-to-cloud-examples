@@ -1,5 +1,5 @@
 #!/bin/sh
-apt-get update && apt-get -y install libssl
+apt-get update && apt-get -y install libssl-dev
 
 wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz
 tar xfz Python-2.7.9.tgz
