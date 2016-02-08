@@ -99,3 +99,5 @@ See [initialstate/README.md](initialstate/README.md) for instructions on how to 
 ### Running
 Run the Initial State example using the following command:
 ```sudo python2.7.9 initialstate_example.py```
+
+<!-- meta-tags: vvv-e20, vvv-sn171, vvv-sn132, vvv-rf200, vvv-ek5100, vvv-snapconnect, vvv-initialstate, vvv-aws-iot, vvv-exosite, vvv-js, vvv-html, vvv-python, vvv-example -->
