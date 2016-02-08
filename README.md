@@ -29,9 +29,11 @@ These setup steps are common to all of the examples included here, regardless of
 Connect the SN132 to your PC by plugging it into any available USB port.
 
 ### Setup Portal
-if you have not already done so, download and install Portal.
+If you have not already done so, download and install the Synapse Portal IDE.
 
-Portal can be found at [forums.synapse-wireless.com](https://forums.synapse-wireless.com).
+The Synapse Portal IDE will allow complete embedded module development, as well as wireless sniffer capability – download the latest version here: 
+
+> https://forums.synapse-wireless.com/showthread.php?t=9
 
 ### Setup the SN171s
 Copy the contents of this project's `snappyImages` directory to your `Portal/snappyImages` directory. Apply power to the SN171s.
