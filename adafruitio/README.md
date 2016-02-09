@@ -1,6 +1,8 @@
 ![](https://cloud.githubusercontent.com/assets/1317406/12406044/32cd9916-be0f-11e5-9b18-1547f284f878.png)
 # E20 Example - Interfacing to Adafruit IO
 
+![](https://cloud.githubusercontent.com/assets/1317406/12931178/07558fe8-cf42-11e5-8f7f-f022f0209598.gif)
+
 ## Configuring Adafruit IO
 To use this example a free Adafruit IO account is required. To sign up, visit:
 
@@ -8,7 +10,7 @@ To use this example a free Adafruit IO account is required. To sign up, visit:
 
 After signing up, go to your [Adafruit IO settings page](https://io.adafruit.com/settings) and get your AIO API key:
 
-![](https://cloud.githubusercontent.com/assets/1317406/12931178/07558fe8-cf42-11e5-8f7f-f022f0209598.gif)
+![](https://cloud.githubusercontent.com/assets/1317406/12931309/b10b9b5e-cf42-11e5-84b0-901e029b340a.png)
 
 ## Setup Gateway
 Simply power up the E20 and load the software onto the E20 (put it in the snap user directory).
