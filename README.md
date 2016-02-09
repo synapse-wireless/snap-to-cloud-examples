@@ -118,4 +118,25 @@ Run the Initial State example using the following command:
 sudo python2.7.9 initialstate_example.py
 ```
 
-<!-- meta-tags: vvv-e20, vvv-sn171, vvv-sn132, vvv-rf200, vvv-ek5100, vvv-snapconnect, vvv-initialstate, vvv-aws-iot, vvv-exosite, vvv-js, vvv-html, vvv-python, vvv-example -->
+## Adafruit IO Example
+### Python Requirements
+The application is written for Python 2.7. Install the required libraries into your Python environment as follows:
+
+```bash
+sudo pip2.7.9 install -r adafruitio/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/
+```
+
+### Adafruit IO Requirements
+To use this example a free Adafruit IO account is required. To sign up, visit:
+https://accounts.adafruit.com/users/sign_up
+
+See [adafruitio/README.md](adafruitio/README.md) for instructions on how to set up your Adafruit IO account.
+
+### Running
+Run the Adafruit IO example using the following command:
+
+```bash
+sudo python2.7.9 adafruit_example.py
+```
+
+<!-- meta-tags: vvv-e20, vvv-sn171, vvv-sn132, vvv-rf200, vvv-ek5100, vvv-snapconnect, vvv-initialstate, vvv-aws-iot, vvv-exosite, vvv-adafruitio, vvv-js, vvv-html, vvv-python, vvv-example -->
