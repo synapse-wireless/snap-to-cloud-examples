@@ -43,7 +43,7 @@ sudo pip2.7.9 install -r requirements.txt --extra-index-url https://update.synap
 Once both of these steps have been competed, execute the main.py Python script as sudo.  
 
 ```bash
-sudo python2.7.9 main.py
+sudo python2.7.9 initialstate_example.py
 ```
 
 Now that Initial State and the E20 have been configured, the Initial State website should show new values that were transmitted by the SNAP node.
