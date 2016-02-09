@@ -52,7 +52,10 @@ onto the E20 and run ```sudo ./install-python2.7.9.sh``` to build and install it
 Note: You must be using python 2.7.9+ in order to use this example.
 
 Install the package dependencies:
-```sudo pip2.7.9 install -r aws_iot/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
+
+```bash
+sudo pip2.7.9 install -r aws_iot/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/
+```
 
 ### AWS Requirements
 An AWS developer account is required, your account must have full AWS IoT privileges. [Follow the instructions here to sign up for AWS.](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html#cli-signup)
@@ -69,12 +72,18 @@ directory to create your devices, policy, and certificate.
 
 ### Running
 Run the AWS example using the following command:
-```sudo python2.7.9 aws_iot_example.py```
+
+```bash
+sudo python2.7.9 aws_iot_example.py
+```
 
 ## Exosite Example
 ### Python Requirements
 The application is written for Python 2.7. Install the required libraries into your Python environment as follows:
-```sudo pip2.7.9 install -r exosite/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
+
+```bash
+sudo pip2.7.9 install -r exosite/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/
+```
 
 ### Exosite Requirements
 An Exosite "Portals" account is required. [Sign up for a free account here](https://portals.exosite.com/signup?plan=2692704445)
@@ -83,12 +92,18 @@ See [exosite/README.md](exosite/README.md) for instructions on how to add device
 
 ### Running
 Run the Exosite example using the following command:
-```sudo python2.7.9 exosite_example.py```
+
+```bash
+sudo python2.7.9 exosite_example.py
+```
 
 ## Initial State Example
 ### Python Requirements
 The application is written for Python 2.7. Install the required libraries into your Python environment as follows:
-```sudo pip2.7.9 install -r initialstate/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/```
+
+```bash
+sudo pip2.7.9 install -r initialstate/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/
+```
 
 ### Initial State Requirements
 To use this example a free Initial State login is required. To sign up, visit:
@@ -98,6 +113,9 @@ See [initialstate/README.md](initialstate/README.md) for instructions on how to 
 
 ### Running
 Run the Initial State example using the following command:
-```sudo python2.7.9 initialstate_example.py```
+
+```bash
+sudo python2.7.9 initialstate_example.py
+```
 
 <!-- meta-tags: vvv-e20, vvv-sn171, vvv-sn132, vvv-rf200, vvv-ek5100, vvv-snapconnect, vvv-initialstate, vvv-aws-iot, vvv-exosite, vvv-js, vvv-html, vvv-python, vvv-example -->
