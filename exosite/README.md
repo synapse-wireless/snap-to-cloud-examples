@@ -1,8 +1,9 @@
 [![](https://cloud.githubusercontent.com/assets/1317406/12406044/32cd9916-be0f-11e5-9b18-1547f284f878.png)](http://www.synapse-wireless.com/)
+
 # E20 Example - Interfacing to Exosite's "Portals"
 
 ## Configuring Exosite Portals
-To use this example a free Exosite Portal is required. To sign up visit:
+To use this example, a free Exosite Portal is required. To sign up, visit:
 
 > https://portals.exosite.com/signup?plan=2692704445
 
@@ -24,9 +25,9 @@ Click the newly added SN171 device and its details should be displayed:
  
 In the "Alias" text box, fill in the SNAP address of the module that is installed in the first SN171 board.
 
-**NOTE** - to be compatible with the main.py example code, the addresses should be entered without any separators (no "." Or ":", etc.) plus the hexadecimal digits a-f must be entered in lower case.
+**NOTE** - to be compatible with the example code, the addresses should be entered without any separators (no "." Or ":", etc.) plus the hexadecimal digits a-f must be entered in lower case.
 
-Where the CIK value is displayed, copy this somewhere for later pasting into the CIK dictionary in main.py.
+Where the CIK value is displayed, copy this somewhere for later pasting into the CIK dictionary in exosite_connector.py.
 
 Next choose "Add Data" to define the information the SNAP node will be sending. 
 In the "Data Setup" dialog that is displayed, fill in the values:
@@ -52,7 +53,7 @@ Submit this form and add two more data sources:
     "Alias" = state
 
 ## Setup Gateway
-Simply power up the E20 and load the software onto the E20 (put it in the snap user directory).  You must edit the provided main.py file to change the EXOSITE_CIKS dictionary to match your SN171 MAC addresses and Exosite CIKs. Find the following code snippet and update it:
+Simply power up the E20 and load the software onto the E20 (put it in the snap user directory).  You must edit the provided exosite_connector.py file to change the EXOSITE_CIKS dictionary to match your SN171 MAC addresses and Exosite CIKs. Find the following code snippet and update it:
 
 ```python
 # TODO: Replace these with values from your own Exosite account and resource
@@ -64,13 +65,13 @@ EXOSITE_CIKS = {"XXXXXX": 'unique Exosite CIK here',
 This example also uses several 3rd-part Python libraries. Install them onto your E20 using
 
 ```bash
-sudo pip2.7.9 install -r requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/
+sudo pip2.7.9 install -r exosite/requirements.txt --extra-index-url https://update.synapse-wireless.com/pypi/
 ```
 
-Once both of these steps have been competed, execute the main.py Python script as sudo.  
+Once both of these steps have been competed, execute the exosite_example.py Python script as sudo.  
 
 ```bash
-sudo python2.7.9 main.py
+sudo python2.7.9 exosite_example.py
 ```
 
 Now that Exosite and the E20 have been configured, refreshing the "Device Information" on the Exosite website should show new values that were transmitted by the SNAP node.
