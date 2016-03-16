@@ -32,4 +32,4 @@ Some things that will increase the chance that your pull request is accepted:
 * Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 * Commit in logical units. If you find yourself using "and" in a commit
   message (other than "Add/fix foo and add tests") you should probably
-  break the work into mulitple commits.
+  break the work into multiple commits.
