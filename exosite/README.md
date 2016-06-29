@@ -2,6 +2,10 @@
 
 # E20 Example - Interfacing to Exosite's "Portals"
 
+## Common Setup
+Each example in this repo require some amount of common setup. Please follow the
+[common setup instructions](../README.md#common-setup) first.
+
 ## Configuring Exosite Portals
 To use this example, a free Exosite Portal is required. To sign up, visit:
 
