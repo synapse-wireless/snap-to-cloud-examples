@@ -5,7 +5,7 @@
 ![](https://cloud.githubusercontent.com/assets/1317406/12931178/07558fe8-cf42-11e5-8f7f-f022f0209598.gif)
 
 ## Common Setup
-Each example in this repo require some amount of common setup. Please follow the
+Each example in this repo requires some amount of common setup. Please follow the
 [common setup instructions](../README.md#common-setup) first.
 
 ## Configuring Adafruit IO
