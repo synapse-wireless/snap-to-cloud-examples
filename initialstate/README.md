@@ -2,6 +2,10 @@
 
 # E20 Example - Interfacing to Initial State
 
+## Common Setup
+Each example in this repo requires some amount of common setup. Please follow the
+[common setup instructions](../README.md#common-setup) first.
+
 ## Configuring Initial State
 To use this example, a free Initial State login is required. To sign up, visit:
 

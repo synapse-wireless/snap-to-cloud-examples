@@ -2,6 +2,10 @@
 
 # E20 Example - Interfacing to Amazon AWS IoT
 
+## Common Setup
+Each example in this repo requires some amount of common setup. Please follow the
+[common setup instructions](../README.md#common-setup) first.
+
 ## Configuring Amazon AWS IoT
 To use this example, an AWS developer account is required, and your account must have full AWS IoT privileges. To sign up, visit:
 
